@@ -1,7 +1,7 @@
-# OSN 2019 Problem Repository
+# KSN 2020 Problem Repository
 
-Problem repository of **OSN 2019** (also known internationally as
-**TOKI OSN Open Contest 2019**).
+Problem repository of **KSN 2020** (also known internationally as
+**TOKI KSN Open Contest 2020**).
 
 ## Problems
 
@@ -216,6 +216,7 @@ correct.
 
 The finalized HTML descriptions and test cases generated using
 [gen_problem.py](https://github.com/jonathanirvings/osn-2019-utils/blob/master/gen_problem.py)
+utility.
 
 ## Several notes
 
