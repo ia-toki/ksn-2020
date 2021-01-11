@@ -1,0 +1,97 @@
+<h3>Description</h3>
+<p>
+  Pak Dengklek has a shop. One day, there are $N$ customers queueing in front of his shop. 
+  Those customers are numbered from $1$ to $N$, from the customer in front of the queue to the 
+  back of the queue, respectively. The $i$-th customer has health level $H_i$.
+</p><p>
+  During this pandemic, his shop follows the health protocol to keep the distance. Therefore, Pak Dengklek 
+  wants to split these $N$ customers into several groups:
+</p><p>
+  Several customers in the front of the queue are in the first group and welcomed to enter the shop. 
+  Then, after the first group is finished, the next several customers in front of the queue 
+  are in the second group and welcomed to enter the shop. This process will go on 
+  until the last few customers are in the last group and welcomed to enter the shop.
+</p><p>
+  Pak Dengklek decided that in a group, there should be no more than $M$ customers which have 
+  the same health level. Pak Dengklek also want the number of groups created is as few as possible.
+  To achieve that, Pak Dengklek can choose up to $K$ customers to leave the queue. 
+  These customers will not be in any group and are not welcomed to enter the shop. It is possible for  
+  Pak Dengklek to ask everyone to leave the queue so that he does not need to create any groups.
+</p><p>
+  Pak Dengklek asked you to manage how to split the customers into several groups such that the 
+  number of groups is minimized. Help Pak Dengklek to count the minimum number of groups needed!
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+N M K
+H<sub>1</sub> H<sub>2</sub> ... H<sub>N</sub>
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  A single line containing an integer that represents the minimum number of groups needed. If 
+  Pak Dengklek does not create any groups, output <code>0</code>.
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  Pak Dengklek can ask the $6$-th customer to leave. The first group consists of the $1$-st, 
+  $2$-nd, $3$-rd, and $4$-th customer. The second group consists of the $5$-th, 
+  $7$-th, and $8$-th customer. There is no better answer than $2$ groups.
+</p>
+
+<samplecase2/>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$1 \leq M \leq N \leq 5 \times 10^4$</li>
+  <li>$0 \leq K \leq \min(N, 400)$</li>
+  <li>$1 \leq H_i \leq N$, for $1 \leq i \leq N$</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>$H_i = 1$, for $1 \leq i \leq N$</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>$N \leq 2000$</li>
+  <li>$K = 0$</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>$N \leq 2000$</li>
+  <li>$K \leq 20$</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>$K = 0$</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>$K \leq 20$</li>
+</ul>
+
+<subtask8/>
+<ul>
+  <li>No additional constraints</li>
+</ul>

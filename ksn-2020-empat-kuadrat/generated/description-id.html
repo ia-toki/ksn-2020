@@ -1,0 +1,138 @@
+<h3>Deskripsi</h3>
+<p>
+  Diberikan sebuah bilangan bulat $N$. Anda diminta untuk mengeluarkan $4$ buah 
+  bilangan bulat non negatif $a$, $b$, $c$, dan $d$ apa pun, sedemikian sehingga nilai dari 
+  $a^2 + b^2 + c^2 + d^2$ sedekat mungkin dengan nilai $N$. Nilai Anda akan bergantung pada 
+  selisih dari $a^2 + b^2 + c^2 + d^2$ dengan $N$, menggunakan rumus yang akan 
+  dijelaskan pada bagian Penilaian.
+</p>
+
+<h3>Informasi Tipe Soal</h3>
+<p>
+  Soal ini bertipe "output-only". Untuk setiap kasus uji, Anda menuliskan keluaran program ke dalam
+  sebuah berkas keluaran.
+</p><p>
+  Masukan untuk soal ini dapat diunduh di bagian Lampiran yang terdapat di bagian bawah soal. 
+  Di dalam berkas .zip tersebut terdapat $1 + 10$ masukan untuk diselesaikan: 
+  <code>empat_contoh_1.in</code>, <code>empat_1.in</code>,
+  <code>empat_2.in</code>, ..., <code>empat_10.in</code>. Masukan contoh (<code>empat_contoh_1.in</code>) 
+  tidak termasuk dalam penilaian peserta.
+</p><p>
+  Untuk setiap berkas masukan yang diselesaikan (Anda tidak harus menyelesaikan semua masukan), 
+  buatlah berkas keluaran dengan nama <code>empat_contoh_T.out</code> (untuk masukan contoh) atau 
+  <code>empat_T.out</code>, dengan <code>T</code> adalah nomor kasus uji. Kemudian, kompres 
+  semua berkas keluaran ke dalam sebuah berkas .zip. Jika Anda membuat program untuk membantu 
+  menyelesaikan soal ini, masukkan semua kode program Anda ke dalam berkas .zip tersebut, lalu kumpulkan.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris berisi $4$ buah bilangan bulat $a$, $b$, $c$, dan $d$.
+</p>
+
+<h3>Contoh Masukan 1</h3>
+<pre>
+33
+</pre>
+<h3>Contoh Keluaran 1</h3>
+<pre>
+4 3 2 2
+</pre>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Pada contoh ini, nilai dari $a^2 + b^2 + c^2 + d^2$ adalah $4^2 + 3^2 + 2^2 + 2^2 = 33$. 
+  Berdasarkan rumus yang ada di bagian Penilaian, nilai yang diperoleh dari contoh keluaran ini adalah $10$.
+</p>
+
+<h3>Penilaian</h3>
+<p>
+  Jika $X$ adalah nilai dari $a^2 + b^2 + c^2 + d^2$, maka nilai yang Anda dapatkan adalah:
+</p>
+
+<table border="1">
+  <thead>
+    <th>Kondisi</th>
+    <th>Poin</th>
+  </thead>
+  <tbody>
+    <tr><td>$|N-X| \geq 10$</td><td>$0$</td></tr>
+    <tr><td>$|N-X| \lt 10$</td><td>$10 - |N-X|$</td></tr>
+  </tbody>
+</table>
+<p>
+  Notasi $|a|$ mengembalikan nilai mutlak dari $a$. Untuk semua masukan, 
+  dapat dibuktikan bahwa terdapat keluaran yang mendapatkan nilai $10$.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>$1 \leq N \leq 10^{18}$</li>
+  <li>$0 \leq a, b, c, d \leq 10^9$</li>
+</ul>
+
+<h4>empat_1.in</h4>
+<ul>
+  <li>$N = 1$</li>
+</ul>
+
+<h4>empat_2.in</h4>
+<ul>
+  <li>$N = 10^{18}$</li>
+</ul>
+
+<h4>empat_3.in</h4>
+<ul>
+  <li>$N = 2020$</li>
+</ul>
+
+<h4>empat_4.in</h4>
+<ul>
+  <li>$N = 10^8+1$</li>
+</ul>
+
+<h4>empat_5.in</h4>
+<ul>
+  <li>$N = 10^9$</li>
+</ul>
+
+<h4>empat_6.in</h4>
+<ul>
+  <li>$N = 10^{18}-10$</li>
+</ul>
+
+<h4>empat_7.in</h4>
+<ul>
+  <li>$N = 2201754854$</li>
+</ul>
+
+<h4>empat_8.in</h4>
+<ul>
+  <li>$N = 11235813213455$</li>
+</ul>
+
+<h4>empat_9.in</h4>
+<ul>
+  <li>$N = 3141592653589793$</li>
+</ul>
+
+<h4>empat_10.in</h4>
+<ul>
+  <li>$N = 987654321123456789$</li>
+</ul>
+
+<h3>Lampiran</h3>
+<p>
+  Berkas masukan untuk soal ini tersedia di <a href="render/inputs.zip">sini</a>.
+</p>

@@ -1,0 +1,98 @@
+{
+  "title_en": "Finding the Balls",
+  "title_id": "Mencari Bola",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [30, 70],
+  "sample_cases": [
+    [false, false],
+    [false, false]
+  ],
+  "test_groups": [
+    [true, false],
+    [false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "prabowo-original.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo_linear.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-naive_binary_search.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-smarter_binser.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "amnu-1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-2.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-3.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-4.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-5.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-6.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-7.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-8.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-9.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "amnu-10.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-98_points.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-linear_smarter.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-linear_batch.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-complement.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER"]
+    }
+  ],
+  "interactive": true
+}

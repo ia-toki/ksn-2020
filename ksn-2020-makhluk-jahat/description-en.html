@@ -1,0 +1,148 @@
+<h3>Description</h3>
+<p>
+  Pak Dengklek is a skilled wizard. In the world where Pak Dengklek lives, there exist 
+  $K$ different magic elements numbered from $1$ to $K$. In the beginning, Pak 
+  Dengklek has mastered $4$ different magic elements, which are $S_1$, $S_2$, 
+  $S_3$, and $S_4$.
+</p><p>
+  Pak Dengklek plans to attack a castle filled with evil spirits. Luckily, Pak 
+  Dengklek has obtained information about the castle's architecture. The castle 
+  consists of $N$ rooms numbered from $1$ to $N$. If Pak Dengklek is currently in 
+  the $x$-th room, then Pak Dengklek can only visit the $(x+1)$-th room, but can not 
+  go back to the $(x-1)$-th room.
+</p><p>
+  There exist $2$ types of room, fighting room and library. The $x$-th room has one 
+  of the following information:
+</p>
+<ul>
+  <li>$1 \; A$: the $x$-th room is a fighting room. In this room, there exists an 
+  evil spirit that Pak Dengklek can fight. This evil spirit masters the $A$-th magic element. 
+  Pak Dengklek can also choose to not fight the evil spirit in this room, and 
+  immediately move to the next room.</li>
+  <li>$2$: the $x$-th room is a library. In this room, Pak Dengklek can learn to master one of 
+  any new magic element, but he has to forget one magic element that he currently 
+  masters. Pak Dengklek can also choose to not master a new magic element if he does not 
+  want to forget magic elements that he currently masters, and immediately move to 
+  the next room.</li>
+</ul>
+<p>
+  Pak Dengklek's ability to defeat evil spirits is represented 
+  by the matrix $M$. Matrix $M$ has the size of $K \times K$, where each of its elements can be 
+  either $0$ or $1$. The rows and columns of $M$ are numbered from $1$ to $K$.
+  If Pak Dengklek masters magic element $i$, Pak Dengklek can defeat 
+  evil spirits that master magic element $j$ if and only if the $i$-th row and $j$-th column 
+  of matrix $M$ is $1$.
+</p>
+<p>
+  Before attacking the castle, Pak Dengklek asks for your advice so that he can 
+  defeat as many evil spirits as possible. Help Pak Dengklek count the maximum 
+  number of evil spirits that he can defeat!
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+N K
+S<sub>1</sub> S<sub>2</sub> S<sub>3</sub> S<sub>4</sub>
+M<sub>1,1</sub>M<sub>1,2</sub>...M<sub>1,K</sub>
+M<sub>2,1</sub>M<sub>2,2</sub>...M<sub>2,K</sub>
+.     .  .
+.      . .
+.       ..
+M<sub>K,1</sub>M<sub>K,2</sub>...M<sub>K,K</sub>
+Room<sub>1</sub>
+Room<sub>2</sub>
+.
+.
+.
+Room<sub>N</sub>
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  A single line containing an integer that represents the maximum number of evil 
+  spirits Pak Dengklek can defeat.
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  The following is one of the strategy to defeat as many evil spirits as possible:
+</p>
+<ul>
+  <li>In the $1$-st room, Pak Dengklek can use the $1$-st, $2$-nd, or $5$-th 
+  magic element to defeat the evil spirit.</li>
+  <li>In the $2$-nd room, there is no magic element that Pak Dengklek masters that can 
+  defeat the evil spirit.</li>
+  <li>In the $3$-rd room, Pak Dengklek can master the $4$-th magic element and 
+  forgot the $1$-st.</li>
+  <li>In the $4$-th room, Pak Dengklek can use the $3$-rd magic element to 
+  defeat the evil spirit.</li>
+  <li>In the $5$-th room, Pak Dengklek can use the $4$-th magic element to 
+  defeat the evil spirit.</li>
+</ul>
+
+<samplecase2/>
+
+<h3>Explanation of Sample 2</h3>
+<p>
+  Pak Dengklek can defeat all evil spirits, whatever strategy that Pak Dengklek chooses.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$1 \leq N \leq 2 \times 10^5$</li>
+  <li>$4 \leq K \leq 20$</li>
+  <li>$0 \leq M_{i,j} \leq 1$, for $1 \leq i, j \leq K$</li>
+  <li>$1 \leq S_1, S_2, S_3, S_4 \leq K$</li>
+  <li>$S_i \neq S_j$, for $1 \leq i < j \leq 4$</li>
+  <li>The number of libraries does not exceed $100$</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>There is no library</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>The number of libraries does not exceed $3$</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>$K = 5$</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>$N \leq 1000$</li>
+  <li>$K \leq 10$</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>$N \leq 1000$</li>
+</ul>
+
+<subtask8/>
+<ul>
+  <li>$K \leq 10$</li>
+</ul>
+
+<subtask9/>
+<ul>
+  <li>No additional constraints</li>
+</ul>

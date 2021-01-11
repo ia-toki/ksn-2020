@@ -1,0 +1,77 @@
+{
+  "title_en": "",
+  "title_id": "",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [11, 7, 5, 12, 18, 15, 23, 9],
+  "sample_cases": [
+    [false, false, false, false, false, true, false, false]
+  ],
+  "test_groups": [
+    [true, false, false, false, false, false, false, false],
+    [false, true, false, false, false, false, false, false],
+    [false, false, true, false, false, false, false, true],
+    [false, false, true, false, false, false, false, false],
+    [false, false, false, true, false, false, false, true],
+    [false, false, false, true, false, false, false, false],
+    [false, false, false, false, true, false, false, true],
+    [false, false, false, false, true, false, false, false],
+    [false, false, false, false, false, true, false, true],
+    [false, false, false, false, false, true, false, false],
+    [false, false, false, false, false, false, true, true],
+    [false, false, false, false, false, false, true, false],
+    [false, false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "prabowo-ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo-general_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo-solution_1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_2.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_3.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED", "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_4.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_5.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_6.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_7.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo-solution_8.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED", "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED"]
+    }
+  ]
+}

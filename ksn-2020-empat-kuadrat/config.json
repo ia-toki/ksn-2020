@@ -1,0 +1,36 @@
+{
+  "title_en": "Four Squares",
+  "title_id": "Empat Kuadrat",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+  "sample_cases": [
+    [false, false, false, false, false, false, false, false, false, false]
+  ],
+  "test_groups": [
+    [true, false, false, false, false, false, false, false, false, false],
+    [false, true, false, false, false, false, false, false, false, false],
+    [false, false, true, false, false, false, false, false, false, false],
+    [false, false, false, true, false, false, false, false, false, false],
+    [false, false, false, false, true, false, false, false, false, false],
+    [false, false, false, false, false, true, false, false, false, false],
+    [false, false, false, false, false, false, true, false, false, false],
+    [false, false, false, false, false, false, false, true, false, false],
+    [false, false, false, false, false, false, false, false, true, false],
+    [false, false, false, false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "prabowo-ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "rfpermen_wa.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER"]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "title_en": "Magical Pillar",
+  "title_id": "Pilar Ajaib",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [4, 8, 12, 13, 13, 22, 18, 10],
+  "sample_cases": [
+    [false, false, false, true, false, false, false, true],
+    [false, false, false, true, false, false, false, true],
+    [false, false, true, true, true, true, true, true]
+  ],
+  "test_groups": [
+    [true, false, true, true, true, true, true, true],
+    [false, true, false, true, false, false, false, true],
+    [false, false, true, true, true, true, true, true],
+    [false, false, true, true, false, true, true, true],
+    [false, false, true, true, false, false, true, true],
+    [false, false, false, true, false, false, false, true],
+    [false, false, false, false, true, true, true, true],
+    [false, false, false, false, false, true, true, true],
+    [false, false, false, false, false, false, true, true],
+    [false, false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "amnu_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "solution-1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-2.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-3.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "INCORRECT_SOLUTION", "RUNTIME_ERROR",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR"]
+    },
+    {
+      "filename": "solution-4.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "INCORRECT_SOLUTION", "RUNTIME_ERROR",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR"]
+    },
+    {
+      "filename": "solution-5.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR",
+                   "ACCEPTED", "RUNTIME_ERROR",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR"]
+    },
+    {
+      "filename": "solution-6.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-7.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "MaximilianusMK_wa_dfs-connectivity.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "MaximilianusMK_wa_connectivity-haram.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    }
+  ]
+}

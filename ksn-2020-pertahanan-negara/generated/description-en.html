@@ -1,0 +1,236 @@
+<h3>Description</h3>
+<p>
+  The country of Toki has a territory with the shape of a rectangle. The map of Toki can 
+  be represented in the Cartesian coordinate system. Four corner points of the rectangle 
+  are at points $(0, 0)$, $(N, 0)$, $(N, M)$, and $(0, M)$.
+</p><p>
+  Pak Dengklek as the Ministry of Defence of Toki wants to split the territory of 
+  the country into $K$ territorial defences numbered from $1$ to $K$. The following are 
+  the rules of each territory that Pak Dengklek wants.
+</p>
+<ul>
+  <li>All territorial defences must be inside the territory of the country.</li>
+  <li>A territorial defence has the shape of a rectangle, whose all corner points are 
+  lattice points and all sides are parallel to the $X$-axis or $Y$-axis.</li>
+  <li>Territorial defence does not intersect but is allowed to touch at the corner points 
+  or sides of other defense territories.</li>
+</ul>
+<p>
+  Pak Dengklek wants you to split the territory of the country with the rules above. Other than that, 
+  Pak Dengklek wants the $i$-th defense territory to have an area of $A_i$. You are allowed to 
+  disobey this request. However, Pak Dengklek will be happier if you can assign the area of the 
+  territorial defence following the area that Pak Dengklek wants.
+</p><p>
+  Suppose that the $i$-th territorial defence that you made has an area of $B_i$. For every 
+  territorial defence $i$, Pak Dengklek's happiness value will increase by:
+</p>
+<ul>
+  <li>$3$, if $B_i = A_i$,</li>
+  <li>$2$, if $B_i > A_i$,</li>
+  <li>$1$, if $0 < B_i < A_i$,</li>
+  <li>$0$, if you did not assign the $i$-th defense territory any area.</li>
+</ul>
+<p>
+  Help Pak Dengklek to determine how to split the territorial defences! If there exists more than 
+  one solution, output any of them. You are allowed to exclude part of the Toki territory into 
+  any territorial defences. Your score depends on Pak Dengklek's happiness value, following the 
+  formula that will be explained in the Scoring section.
+</p>
+
+<h3>Problem Type Information</h3>
+<p>
+  This is an "output-only" problem. For each test case, you write the output to a file.
+</p><p>
+  The input files for this problem can be downloaded in the Attachment section at the end of 
+  this problem. Inside the .zip file, there are 2 + 10 input files to solve: <code>pertahanan_contoh_1.in</code>, 
+  <code>pertahanan_contoh_2.in</code>, <code>pertahanan_1.in</code>, <code>pertahanan_2.in</code>, 
+  ..., <code>pertahanan_10.in</code>. The sample input (<code>pertahanan_contoh_1.in</code> and 
+  <code>pertahanan_contoh_2.in</code>) are not included in the final score.
+</p><p>
+  For each input file that you solve (you don't have to solve all input files), create an output 
+  file <code>pertahanan_contoh_T.out</code> (for sample input) or <code>pertahanan_T.out</code>, 
+  where T is the test case number. Then, compress all output files into a single .zip file. 
+  If you made any program to help solving this problem, include all of your source codes 
+  into the .zip file, then submit.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+N M K
+A<sub>1</sub> A<sub>2</sub> ... A<sub>K</sub>
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  $K$ lines: the $i$-th line consists of $4$ integers $x_1, x_2, y_1,$ and $y_2$, which 
+  shows that the corner points of the $i$-th defense territory are at point $(x_1, y_1)$, 
+  $(x_2, y_1)$, $(x_2, y_2)$, and $(x_1, y_2)$. If You do not want to assign area to 
+  the $i$-th defense territory, output <code>-1 -1 -1 -1</code>.	
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+4 5 3
+8 9 3
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+0 4 0 2
+0 3 2 5
+3 4 2 5
+</pre>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  This sample can be illustrated with the following image. The numbers inside each rectangles in the 
+  image corresponds to each territorial defence. Since all territorial defences have the same area as what 
+  Pak Dengklek wants, therefore Pak Dengklek's happiness value is $3 + 3 + 3 = 9$. Using the formula 
+  in the Scoring section, the score achieved by this sample output is $10$.
+</p>
+<p style="text-align: center;"><img src="render/pertahanan-negara-1.png" style="width: 250px;"/></p>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 5 4
+5 4 3 3
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+0 1 0 5
+1 2 0 4
+2 3 0 3
+-1 -1 -1 -1
+</pre>
+
+<h3>Explanation of Sample 2</h3>
+<p>
+  This sample can be illustrated with the following image. The numbers inside each rectangles in the 
+  image correspond to territorial defences. Note that in this sample output, the $4$-th 
+  territorial defence is not assigned with any area. Moreover, there is part of Toki territory that is not 
+  inside any territorial defences. Pak Dengklek's happiness value is $3 + 3 + 3 + 0 = 9$. Using the formula 
+  in the Scoring section, the score achieved by this sample output is $5$.
+</p>
+<p style="text-align: center;"><img src="render/pertahanan-negara-2.png" style="width: 250px;"/></p>
+
+<h3>Scoring</h3>
+<p>
+  Your output will achieve a score on a test case if your output follows the specified output format that was 
+  previously mentioned and follow Pak Dengklek's rule.
+</p><p>
+  If $X$ is Pak Dengklek's total happiness value based on your territorial defences assignment, then 
+  your score is:
+</p>
+
+<table border="1">
+  <thead>
+    <th>Condition</th>
+    <th>Point</th>
+  </thead>
+  <tbody>
+    <tr><td>$X = 3K$</td><td>$10$</td></tr>
+    <tr><td>$X < 3K$</td><td>$\lfloor (\frac{X}{K})^2 \rceil$</td></tr>
+  </tbody>
+</table>
+<p>
+  The notation $\lfloor x \rceil$ returns round value of $x$ to the nearest integer. 
+  For all inputs, it is guaranteed that there exists an output that achieves a score of $10$.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$1 \leq N, M \leq 10^9$</li>
+  <li>$1 \leq K \leq 10^5$</li>
+  <li>$1 \leq A_i \leq 10^9$</li>
+  <li>$A_1+A_2+\dots+A_K = N \times M$</li>
+</ul>
+
+<h4>pertahanan_1.in</h4>
+<ul>
+  <li>$N = 5$</li>
+  <li>$M = 5$</li>
+  <li>$K = 5$</li>
+  <li>$A = \{4, 4, 4, 4, 9\}$</li>
+</ul>
+
+<h4>pertahanan_2.in</h4>
+<ul>
+  <li>$N = 6$</li>
+  <li>$M = 7$</li>
+  <li>$K = 8$</li>
+  <li>$A = \{2, 3, 4, 5, 6, 6, 7, 9\}$</li>
+</ul>
+
+<h4>pertahanan_3.in</h4>
+<ul>
+  <li>$N = 1$</li>
+  <li>$M = 10^9$</li>
+  <li>$K = 10^5$</li>
+</ul>
+
+<h4>pertahanan_4.in</h4>
+<ul>
+  <li>$N = 99999$</li>
+  <li>$M = 50000$</li>
+  <li>$K = 99999$</li>
+  <li>$A_i = i$, for $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_5.in</h4>
+<ul>
+  <li>$N = 9973 \times 293$</li>
+  <li>$M = 99991 \times 311$</li>
+  <li>$K = 9973 \times 99991$</li>
+  <li>$A_i = 293 \times 311$, for $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_6.in</h4>
+<ul>
+  <li>$N = 2$</li>
+  <li>$M = 10^9$</li>
+  <li>$K = 20$</li>
+  <li>There are $10$ even $A_i$ and $10$ odd $A_i$</li>
+</ul>
+
+<h4>pertahanan_7.in</h4>
+<ul>
+  <li>$N = 2$</li>
+  <li>$M = 10^4$</li>
+  <li>$K = 100$</li>
+</ul>
+
+<h4>pertahanan_8.in</h4>
+<ul>
+  <li>$N = 4681$</li>
+  <li>$M = 229383$</li>
+  <li>$K = 30$</li>
+  <li>$A_i = 2^{i-1}$, for $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_9.in</h4>
+<ul>
+  <li>$N = 46368$</li>
+  <li>$M = 28657$</li>
+  <li>$K = 23$</li>
+  <li>$A_1 = A_2 = 1$</li>
+  <li>$\sqrt{A_i} = \sqrt{A_{i-1}} + \sqrt{A_{i-2}}$, for $3 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_10.in</h4>
+<ul>
+  <li>$N = 2000$</li>
+  <li>$M = 2000$</li>
+  <li>$K = 78987$</li>
+  <li>$A_i \leq 100$, for $1 \leq i \leq K$</li>
+  <li>Test case was generated randomly with uniform probability distribution</li>
+</ul>
+
+<h3>Attachment</h3>
+<p>
+  Input files for this problem is available <a href="render/inputs.zip">here</a>.
+</p>

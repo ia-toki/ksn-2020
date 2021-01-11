@@ -1,0 +1,124 @@
+<h3>Deskripsi</h3>
+<p>
+  Pak Dengklek memiliki sebuah toko. Suatu hari, terdapat $N$ pengunjung yang mengantre di depan tokonya. 
+  Pengunjung-pengunjung tersebut dinomori dari $1$ hingga $N$ secara urut dari antrean paling depan hingga 
+  paling belakang. Pengunjung ke-$i$ memiliki tingkat kesehatan $H_i$.
+</p><p>
+  Pada masa pandemi ini, toko milik Pak Dengklek mengikuti protokol kesehatan untuk menjaga jarak. 
+  Oleh karena itu, Pak Dengklek ingin membagi $N$ pengunjung tersebut menjadi beberapa kelompok, yang
+  mengikuti protokol kesehatan berikut:
+</p><p>
+  Beberapa pengunjung terdepan dari antrean masuk ke dalam kelompok pertama dan dipersilakan 
+  untuk memasuki toko. Setelah kelompok pertama selesai, beberapa pengunjung terdepan selanjutnya 
+  dari antrean masuk ke dalam kelompok kedua dan dipersilakan untuk memasuki toko. Proses 
+  ini terus berlangsung hingga beberapa pengunjung terakhir masuk ke dalam kelompok 
+  terakhir dan dipersilakan untuk memasuki toko.
+</p><p>
+  Pak Dengklek memutuskan bahwa dalam suatu kelompok tidak boleh terdapat lebih dari $M$ pengunjung yang 
+  memiliki tingkat kesehatan yang sama. Pak Dengklek juga menginginkan banyaknya kelompok yang dibutuhkan
+  sesedikit mungkin. Agar dapat mencapai hal tersebut, Pak Dengklek juga dapat mengeluarkan hingga $K$ pengunjung 
+  dari antrean. Pengunjung yang dikeluarkan tidak masuk ke kelompok mana pun dan tidak 
+  dipersilakan untuk masuk ke dalam toko. Pak Dengklek dimungkinkan untuk mengeluarkan 
+  semua pengunjung sehingga ia tidak perlu membuat kelompok.
+</p><p>
+  Pak Dengklek meminta bantuan kepada Anda untuk mengatur pembagian kelompok sehingga banyaknya kelompok 
+  yang dibutuhkan minimum. Bantulah Pak Dengklek menentukan banyaknya kelompok minimum yang dibutuhkan!
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N M K
+H<sub>1</sub> H<sub>2</sub> ... H<sub>N</sub>
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris berisi sebuah bilangan yang menunjukkan banyaknya kelompok minimum yang dibutuhkan. Apabila 
+  Pak Dengklek tidak membuat kelompok, keluarkan <code>0</code>.
+</p>
+
+<h3>Contoh Masukan 1</h3>
+<pre>
+8 2 1
+1 1 2 2 1 2 2 2
+</pre>
+<h3>Contoh Keluaran 1</h3>
+<pre>
+2
+</pre>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Pak Dengklek dapat mengeluarkan pengunjung ke-$6$. Kelompok pertama terdiri atas pengunjung ke-$1$, 
+  ke-$2$, ke-$3$, dan ke-$4$. Kelompok kedua terdiri atas pengunjung ke-$5$, ke-$7$, dan
+  ke-$8$. Tidak ada jawaban yang lebih optimal dari $2$ kelompok.
+</p>
+
+<h3>Contoh Masukan 2</h3>
+<pre>
+5 1 0
+3 3 3 3 3
+</pre>
+<h3>Contoh Keluaran 2</h3>
+<pre>
+5
+</pre>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>$1 \leq M \leq N \leq 5 \times 10^4$</li>
+  <li>$0 \leq K \leq \min(N, 400)$</li>
+  <li>$1 \leq H_i \leq N$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 1 (4 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+13 3 1
+1 1 1 1 1 1 1 1 1 1 1 1 1
+</pre>
+
+<h4>Subsoal 2 (7 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+15 1 2
+1 2 3 4 4 4 3 2 1 5 6 6 7 7 5
+</pre>
+
+<h4>Subsoal 3 (8 poin)</h4>
+<ul>
+  <li>$H_i = 1$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 4 (10 poin)</h4>
+<ul>
+  <li>$N \leq 2000$</li>
+  <li>$K = 0$</li>
+</ul>
+
+<h4>Subsoal 5 (15 poin)</h4>
+<ul>
+  <li>$N \leq 2000$</li>
+  <li>$K \leq 20$</li>
+</ul>
+
+<h4>Subsoal 6 (9 poin)</h4>
+<ul>
+  <li>$K = 0$</li>
+</ul>
+
+<h4>Subsoal 7 (19 poin)</h4>
+<ul>
+  <li>$K \leq 20$</li>
+</ul>
+
+<h4>Subsoal 8 (28 poin)</h4>
+<ul>
+  <li>Tidak ada batasan tambahan</li>
+</ul>

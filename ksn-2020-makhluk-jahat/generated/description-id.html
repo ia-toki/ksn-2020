@@ -1,0 +1,243 @@
+<h3>Deskripsi</h3>
+<p>
+  Pak Dengklek adalah seorang penyihir yang andal. Dalam dunia tempat Pak Dengklek 
+  tinggal, terdapat $K$ jenis elemen sihir berbeda yang dinomori dari $1$ 
+  hingga $K$. Awalnya, Pak Dengklek telah menguasai $4$ jenis elemen sihir 
+  berbeda, yaitu $S_1$, $S_2$, $S_3$, dan $S_4$.
+</p><p>
+  Pak Dengkek berencana untuk menyerang sebuah benteng yang penuh dengan makhluk jahat. 
+  Untungnya, Pak Dengklek sudah memperoleh informasi dari arsitektur benteng tersebut. 
+  Benteng tersusun atas $N$ ruangan yang dinomori dari $1$ hingga $N$. 
+  Apabila Pak Dengklek sedang berada di ruangan ke-$x$, maka Pak Dengklek dapat 
+  mengunjungi ruangan ke-$(x+1)$, tetapi tidak dapat kembali ke ruangan ke-$(x-1)$.
+</p><p>
+  Terdapat $2$ tipe ruangan, yaitu ruang bertarung dan perpustakaan. Ruangan ke-$x$ 
+  memiliki salah satu dari informasi berikut:
+</p>
+<ul>
+  <li>$1 \; A$: ruangan ke-$x$ adalah ruang bertarung. Dalam ruangan 
+  ini, terdapat sebuah makhluk jahat yang dapat Pak Dengklek lawan. Makhluk jahat 
+  ini menguasai elemen sihir ke-$A$. Pak Dengklek juga dapat memilih untuk 
+  tidak melawan makhluk jahat di ruangan ini, dan langsung menuju ke ruangan selanjutnya.</li>
+  <li>$2$: ruangan ke-$x$ adalah ruang perpustakaan. Dalam ruangan ini, Pak 
+  Dengklek dapat belajar untuk menguasai satu elemen sihir baru apa pun, dengan syarat ia harus 
+  melupakan salah satu elemen sihir yang saat ini ia kuasai. Pak Dengklek juga dapat memilih 
+  untuk tidak menguasai elemen sihir baru jika ia tidak ingin melupakan elemen sihir yang 
+  saat ini ia kuasai, dan langsung menuju ke ruangan selanjutnya.</li>
+</ul>
+<p>
+  Kemampuan Pak Dengklek dengan makhluk jahat dapat direpresentasikan 
+  dalam matriks $M$. Matriks $M$ ini berukuran $K \times K$ yang setiap 
+  elemennya hanya dapat bernilai $0$ atau $1$. Baris-baris dan kolom-kolom dari $M$ dinomori dari
+  $1$ hingga $K$. Apabila Pak Dengklek menguasai elemen 
+  sihir $i$, Pak Dengklek dapat mengalahkan makhluk jahat yang menguasai elemen sihir $j$ jika 
+  dan hanya jika baris ke-$i$ dan kolom ke-$j$ dari matriks $M$ bernilai $1$. 
+</p>
+<p>
+  Sebelum menyerang benteng tersebut, Pak Dengklek meminta saran kepada Anda agar ia dapat 
+  mengalahkan makhluk jahat sebanyak mungkin. Bantulah Pak Dengklek menghitung banyaknya 
+  makhluk jahat maksimum yang dapat ia kalahkan!
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N K
+S<sub>1</sub> S<sub>2</sub> S<sub>3</sub> S<sub>4</sub>
+M<sub>1,1</sub>M<sub>1,2</sub>...M<sub>1,K</sub>
+M<sub>2,1</sub>M<sub>2,2</sub>...M<sub>2,K</sub>
+.     .  .
+.      . .
+.       ..
+M<sub>K,1</sub>M<sub>K,2</sub>...M<sub>K,K</sub>
+Ruangan<sub>1</sub>
+Ruangan<sub>2</sub>
+.
+.
+.
+Ruangan<sub>N</sub>
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris berisi sebuah bilangan yang menunjukkan jumlah makhluk jahat maksimum yang 
+  dapat Pak Dengklek kalahkan.
+</p>
+
+<h3>Contoh Masukan 1</h3>
+<pre>
+5 5
+1 2 3 5
+11100
+01010
+10110
+01001
+11010
+1 2
+1 5
+2
+1 3
+1 5
+</pre>
+<h3>Contoh Keluaran 1</h3>
+<pre>
+3
+</pre>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Berikut adalah salah satu strategi untuk mengalahkan makhluk jahat sebanyak mungkin:
+</p>
+<ul>
+  <li>Dalam ruangan ke-$1$, Pak Dengklek dapat menggunakan elemen sihir ke-$1$, 
+  ke-$2$, atau ke-$5$ untuk mengalahkan makhluk jahat.</li>
+  <li>Dalam ruangan ke-$2$, tidak ada elemen sihir yang Pak Dengklek kuasai yang dapat 
+  mengalahkan makhluk jahat.</li>
+  <li>Dalam ruangan ke-$3$, Pak Dengklek menguasai elemen sihir ke-$4$ dan melupakan 
+  elemen sihir ke-$1$.</li>
+  <li>Dalam ruangan ke-$4$, Pak Dengklek dapat menggunakan elemen sihir ke-$3$ 
+  untuk mengalahkan makhluk jahat.</li>
+  <li>Dalam ruangan ke-$5$, Pak Dengklek dapat menggunakan elemen sihir ke-$4$ 
+  untuk mengalahkan makhluk jahat.</li>
+</ul>
+
+<h3>Contoh Masukan 2</h3>
+<pre>
+8 5
+1 2 3 5
+11111
+11111
+11111
+11111
+11111
+1 2
+1 1
+2
+1 3
+1 5
+2
+2
+1 4
+</pre>
+<h3>Contoh Keluaran 2</h3>
+<pre>
+5
+</pre>
+
+<h3>Penjelasan Contoh 2</h3>
+<p>
+  Pak Dengklek dapat mengalahkan semua makhluk jahat yang ada, apa pun strategi yang Pak Dengklek 
+  pilih.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>$1 \leq N \leq 2 \times 10^5$</li>
+  <li>$4 \leq K \leq 20$</li>
+  <li>$0 \leq M_{i,j} \leq 1$, untuk $1 \leq i, j \leq K$</li>
+  <li>$1 \leq S_1, S_2, S_3, S_4 \leq K$</li>
+  <li>$S_i \neq S_j$, untuk $1 \leq i < j \leq 4$</li>
+  <li>Banyaknya ruangan tipe perpustakaan tidak lebih dari $100$</li>
+</ul>
+
+<h4>Subsoal 1 (5 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+9 6
+4 6 1 2
+000010
+100000
+000001
+001000
+010000
+000100
+1 4
+1 3
+2
+1 6
+1 2
+2
+1 1
+1 5
+2
+</pre>
+
+<h4>Subsoal 2 (9 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+24 8
+5 1 7 2
+00100000
+00010101
+01100000
+01001110
+11000100
+10110101
+10001000
+01001100
+1 7
+1 2
+1 7
+1 4
+2
+1 5
+1 3
+1 5
+2
+1 2
+1 6
+2
+1 2
+1 4
+1 1
+1 3
+1 6
+1 4
+1 1
+1 3
+1 7
+1 2
+1 8
+1 4
+</pre>
+
+<h4>Subsoal 3 (8 poin)</h4>
+<ul>
+  <li>Tidak terdapat ruangan tipe perpustakaan</li>
+</ul>
+
+<h4>Subsoal 4 (11 poin)</h4>
+<ul>
+  <li>Banyaknya ruangan tipe perpustakaan tidak lebih dari $3$</li>
+</ul>
+
+<h4>Subsoal 5 (10 poin)</h4>
+<ul>
+  <li>$K = 5$</li>
+</ul>
+
+<h4>Subsoal 6 (16 poin)</h4>
+<ul>
+  <li>$N \leq 1000$</li>
+  <li>$K \leq 10$</li>
+</ul>
+
+<h4>Subsoal 7 (16 poin)</h4>
+<ul>
+  <li>$N \leq 1000$</li>
+</ul>
+
+<h4>Subsoal 8 (15 poin)</h4>
+<ul>
+  <li>$K \leq 10$</li>
+</ul>
+
+<h4>Subsoal 9 (10 poin)</h4>
+<ul>
+  <li>Tidak ada batasan tambahan</li>
+</ul>

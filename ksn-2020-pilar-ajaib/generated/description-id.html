@@ -1,0 +1,177 @@
+<h3>Deskripsi</h3>
+<p>
+  Pak Dengklek sedang berada di sebuah ruangan yang dapat direpresentasikan 
+  dalam sistem koordinat Kartesius. Awalnya, ruangan tersebut gelap gulita dan hanya 
+  terdapat sebuah sumber cahaya yang memancarkan <em>sinar</em>.
+</p><p>
+  Sebuah <em>sinar</em> dapat direpresentasikan dengan $3$ parameter: titik pusat 
+  yang berada pada koordinat $(x_p, y_p)$, lebar sinar $w$, dan arah sinar $d$. 
+  Variabel $d$ hanya dapat bernilai $\text{vertikal}$ atau $\text{horizontal}$.
+  Sinar ini menyinari semua titik $(x', y')$ yang memenuhi pertidaksamaan:
+</p>
+<ul>
+  <li>$x_p - w \leq x' \leq x_p + w$ jika $d = \text{vertikal}$, atau</li>
+  <li>$y_p - w \leq y' \leq y_p + w$ jika $d = \text{horizontal}$.</li>
+</ul>
+<p>
+  Dalam ruangan tersebut terdapat $N$ buah pilar ajaib yang dinomori dari 
+  $1$ hingga $N$. Pilar ke-$i$ berbentuk lingkaran yang memiliki titik pusat $(X_i, Y_i)$ 
+  dan jari-jari $R_i$. Dua buah pilar boleh saja bertumpukan.
+</p><p>
+  Pilar-pilar ajaib dalam ruangan tersebut memiliki sifat khusus. Apabila pilar ke-$i$ terkena 
+  suatu sinar dengan arah $d$, maka pilar tersebut akan memancarkan 
+  sinar dari titik pusat $(X_i, Y_i)$ dengan lebar $R_i$ dan arah $d$.
+  Sebuah pilar dikatakan terkena suatu sinar apabila terdapat sebuah titik yang 
+  berada di dalam pilar yang disinari oleh sinar tersebut. Sebuah titik $(x, y)$ 
+  dikatakan berada di dalam pilar ke-$i$ apabila $(X_i - x)^2 + (Y_i - y)^2 \leq 
+  R_i^2$.
+</p><p>
+  Pak Dengklek juga dapat meningkatkan keajaiban pilar ke-$i$ dengan biaya 
+  sebesar $C_i$. Apabila pilar ke-$i$ terkena suatu sinar, dan keajaiban pilar tersebut 
+  ditingkatkan, maka pilar tersebut akan memancarkan $2$ buah sinar 
+  arah vertikal dan horizontal dari titik pusat $(X_i, Y_i)$ 
+  dengan lebar $R_i$. Awalnya, keajaiban semua pilar belum ditingkatkan.
+</p><p>
+  Diketahui bahwa satu-satunya sumber cahaya memancarkan sinar dari 
+  titik pusat $(X_S, Y_S)$ dengan lebar $0$ dan arah horizontal. Pak 
+  Dengklek ingin mengetahui total biaya minimum yang dibutuhkan untuk menyinari 
+  titik $(X_F, Y_F)$. Bantulah Pak Dengklek untuk mencari total biaya minimum untuk 
+  menyinari titik tersebut, atau beri tahu Pak Dengklek apabila hal tersebut 
+  tidaklah mungkin.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N X<sub>S</sub> Y<sub>S</sub> X<sub>F</sub> Y<sub>F</sub>
+X<sub>1</sub> Y<sub>1</sub> R<sub>1</sub> C<sub>1</sub>
+X<sub>2</sub> Y<sub>2</sub> R<sub>2</sub> C<sub>2</sub>
+.
+.
+.
+X<sub>N</sub> Y<sub>N</sub> R<sub>N</sub> C<sub>N</sub>
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris berisi sebuah bilangan yang menunjukkan total biaya minimum yang dibutuhkan 
+  untuk menyinari titik $(X_F, Y_F)$. Keluarkan <code>-1</code> apabila 
+  titik tersebut tidak mungkin disinari.
+</p>
+
+<h3>Contoh Masukan 1</h3>
+<pre>
+3 0 0 2 7
+5 1 3 100
+10 2 0 3
+11 6 1 2
+</pre>
+<h3>Contoh Keluaran 1</h3>
+<pre>
+5
+</pre>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Contoh ini dapat diilustrasikan dengan animasi berikut. Pak Dengklek meningkatkan keajaiban  
+  dari pilar ke-$2$ dan ke-$3$ dengan total biaya sebesar $5$. Tidak ada konfigurasi 
+  peningkatan keajaiban pilar lainnya yang menghasilkan jawaban lebih optimal.
+</p>
+
+<p style="text-align:center;"><img src="render/pilar-ajaib-id.gif" style="width:400px" /></p>
+
+<h3>Contoh Masukan 2</h3>
+<pre>
+2 1 1 10 5
+3 1 1 4
+4 3 2 1
+</pre>
+<h3>Contoh Keluaran 2</h3>
+<pre>
+0
+</pre>
+
+<h3>Contoh Masukan 3</h3>
+<pre>
+1 1 1 2 2
+3 3 0 0
+</pre>
+<h3>Contoh Keluaran 3</h3>
+<pre>
+-1
+</pre>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>$1 \leq N \leq 10^5$</li>
+  <li>$-10^9 \leq X_S, Y_S, X_F, Y_F \leq 10^9$</li>
+  <li>$-10^9 \leq X_i, Y_i \leq 10^9$, untuk $1 \leq i \leq N$</li>
+  <li>$0 \leq R_i \leq 10^9$, untuk $1 \leq i \leq N$</li>
+  <li>$0 \leq C_i \leq 10^9$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 1 (4 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+5 1 1 4 4
+2 1 0 0
+2 2 0 0
+3 2 0 0
+3 3 0 0
+4 3 0 0
+</pre>
+
+<h4>Subsoal 2 (8 poin)</h4>
+<p>Hanya berisi kasus uji berikut:</p>
+<pre>
+9 0 15 10 1
+2 4 1 7
+5 3 1 13
+8 2 1 9
+2 9 1 2
+5 8 1 3
+8 7 1 3
+2 14 1 13
+5 13 1 7
+8 12 1 11
+</pre>
+
+<h4>Subsoal 3 (12 poin)</h4>
+<ul>
+  <li>$N \leq 1000$</li>
+  <li>$C_i = 0$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 4 (13 poin)</h4>
+<ul>
+  <li>$N \leq 1000$</li>
+</ul>
+
+<h4>Subsoal 5 (13 poin)</h4>
+<ul>
+  <li>$-1000 \leq X_S, Y_S, X_F, Y_F \leq 1000$</li>
+  <li>$-1000 \leq X_i, Y_i \leq 1000$, untuk $1 \leq i \leq N$</li>
+  <li>$R_i = 0$, untuk $1 \leq i \leq N$</li>
+  <li>$C_i = 0$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 6 (22 poin)</h4>
+<ul>
+  <li>$R_i = 0$, untuk $1 \leq i \leq N$</li>
+  <li>$C_i = 0$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 7 (18 poin)</h4>
+<ul>
+  <li>$C_i = 0$, untuk $1 \leq i \leq N$</li>
+</ul>
+
+<h4>Subsoal 8 (10 poin)</h4>
+<ul>
+  <li>Tidak ada batasan tambahan</li>
+</ul>

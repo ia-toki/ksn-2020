@@ -1,0 +1,170 @@
+<h3>Description</h3>
+<p>
+  Pak Dengklek asks you to play with him. In the beginning, there are $K$ piles 
+  of stones numbered from $1$ to $K$. The $i$-th pile has $A_i$ stones.
+</p><p>
+  The players take turns alternately. The first turn is played by you. For each turn, 
+  a player takes at least one stone from one of the piles as long as the number 
+  of stones does not exceed $N$ and there are still enough stones in that pile. 
+  If a player cannot make a valid move in their turn, then that player loses the game 
+  and the game is finished.
+</p>
+<p>
+  Since you are a competitive person, you do not want to lose against Pak Dengklek. 
+  Therefore, you want to make a program that can beat Pak Dengklek.
+</p>
+
+<h3>Problem Type Information</h3>
+<p>
+  This is an "interactive" problem. In this problem, you will interact with the judge's 
+  program through standard input (stdin) and standard output (stdout). See the 
+  following interaction format carefully.
+</p>
+
+<h3>Interaction Format</h3>
+<p>
+  In the beginning, the value of $K$, $N$, and all values of $A_i$ will be given 
+  from the standard input with the following format:
+</p>
+<pre>
+K N
+A<sub>1</sub> A<sub>2</sub> ... A<sub>K</sub>
+</pre>
+<p>
+  Then, for each turn, a player can take $x$ stones from the $i$-th piles with the 
+  following format:
+</p>
+<pre>
+i x
+</pre>
+<p>
+  If Pak Dengklek cannot make any valid move, then you will be given an input 
+  in the following format:
+</p>
+<pre>
+-1 -1
+</pre>
+<p>
+  Interaction is finished with this input and your program is considered as 
+  correct for this test case.
+</p>
+
+<h3>Interaction Sample 1</h3>
+<p>
+  In this sample, $K = 1, N = 2$, and $A_1 = 4$.
+</p>
+<table border="1">
+  <thead>
+    <th>Standard input</th>
+    <th>Standard output</th>
+  </thead>
+  <tbody>
+    <tr><td>
+<pre>
+1 2
+4
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+1 1
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+1 2
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+1 1
+</pre>
+    </td></tr>
+<tr><td>
+<pre>
+-1 -1
+</pre>
+    </td><td></td></tr>
+  </tbody>
+</table>
+
+<h3>Interaction Sample 2</h3>
+<p>
+  In this sample, $K = 2, N = 2, A_1 = 2$, and $A_2 = 1$.
+</p>
+<table border="1">
+  <thead>
+    <th>Standard input</th>
+    <th>Standard output</th>
+  </thead>
+  <tbody>
+    <tr><td>
+<pre>
+2 2
+2 1
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+1 1
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+1 1
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+2 1
+</pre>
+    </td></tr>
+<tr><td>
+<pre>
+-1 -1
+</pre>
+    </td><td></td></tr>
+  </tbody>
+</table>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$1 \leq K \leq 2$</li>
+  <li>$1 \leq A_i \leq 10^4$, for $1 \leq i \leq K$</li>
+  <li>$1 \leq N \leq 10^4$</li>
+  <li>There exists a strategy that can make the first turn player win the game</li>
+</ul>
+
+<subtask1/>
+<ul>
+  <li>$K = 1$</li>
+</ul>
+
+<subtask2/>
+<ul>
+  <li>$K = 2$</li>
+  <li>$1 \leq A_i \leq 100$</li>
+  <li>$1 \leq N \leq 100$</li>
+</ul>
+
+<subtask3/>
+<ul>
+  <li>$K = 2$</li>
+</ul>
+
+<h3>Warning</h3>
+<p>
+  Always <i>flush</i> after each output.
+</p>
+<ul>
+  <li>Pascal:<pre>flush(output);</pre></li>
+  <li>C/C++:
+      <ul>
+        <li>for <code>stdio.h</code> (<code>cstdio</code>) library:<pre>fflush(stdout);</pre></li>
+        <li>for <code>iostream</code> library:<pre>std::cout << std::flush;</pre></li>
+      </ul>
+  </li>
+</ul>

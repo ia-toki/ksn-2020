@@ -1,0 +1,83 @@
+<h3>Description</h3>
+<p>
+  Define a recursive function $f(x,y)=x^{f(x,y-1)}$ if $y \gt 0$, and $f(x,y)=1$ 
+  if $y = 0$. Given $3$ positive integers $A$, $B$, and $M$, determine the value of 
+  $f(A,B)$ modulo $M$.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+A B M
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  A single line consists of the value of $f(A,B)$ modulo $M$.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+2 3 5
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+1
+</pre>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  $f(2,3) = 2^{f(2,2)} = 2^{2^{f(2,1)}} = 2^{2^{2^{f(2,0)}}} = 2^{2^{2^1}} = 2^{2^2} = 2^4 = 16$.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$1 \leq A, B, M \leq 10^{9}$</li>
+</ul>
+
+<h4>Subtask 1 (11 points)</h4>
+<p>Contains only the following test case:</p>
+<pre>
+3 3 100
+</pre>
+
+<h4>Subtask 2 (7 points)</h4>
+<p>Contains only the following test case:</p>
+<pre>
+20202020 202020 2020
+</pre>
+
+<h4>Subtask 3 (5 points)</h4>
+<ul>
+  <li>$M = 2$</li>
+</ul>
+
+<h4>Subtask 4 (12 points)</h4>
+<ul>
+  <li>$M = 3$</li>
+</ul>
+
+<h4>Subtask 5 (18 points)</h4>
+<ul>
+  <li>$M = 4$</li>
+</ul>
+
+<h4>Subtask 6 (15 points)</h4>
+<ul>
+  <li>$M = 5$</li>
+</ul>
+
+<h4>Subtask 7 (23 points)</h4>
+<ul>
+  <li>$M = 6$</li>
+</ul>
+
+<h4>Subtask 8 (9 points)</h4>
+<ul>
+  <li>$B = 2$</li>
+</ul>

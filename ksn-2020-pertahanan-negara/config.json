@@ -1,0 +1,48 @@
+{
+  "title_en": "National Defense",
+  "title_id": "Pertahanan Negara",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+  "sample_cases": [
+    [false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false]
+  ],
+  "test_groups": [
+    [true, false, false, false, false, false, false, false, false, false],
+    [false, true, false, false, false, false, false, false, false, false],
+    [false, false, true, false, false, false, false, false, false, false],
+    [false, false, false, true, false, false, false, false, false, false],
+    [false, false, false, false, true, false, false, false, false, false],
+    [false, false, false, false, false, true, false, false, false, false],
+    [false, false, false, false, false, false, true, false, false, false],
+    [false, false, false, false, false, false, false, true, false, false],
+    [false, false, false, false, false, false, false, false, true, false],
+    [false, false, false, false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "amnu_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "amnu_ok.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo-place_all_one.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER"]
+    }
+  ]
+}

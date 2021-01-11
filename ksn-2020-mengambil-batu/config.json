@@ -1,0 +1,31 @@
+{
+  "title_en": "Taking Stones",
+  "title_id": "Mengambil Batu",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [0, 0, 0],
+  "sample_cases": [
+    [true, false, false],
+    [false, true, true]
+  ],
+  "test_groups": [
+    [true, false, false],
+    [false, true, true],
+    [false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "solution-1.cpp",
+      "verdicts": ["ACCEPTED", "INCORRECT_SOLUTION", "INCORRECT_SOLUTION"]
+    },
+    {
+      "filename": "solution-2.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "INCORRECT_SOLUTION"]
+    },
+    {
+      "filename": "solution-wa.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER", "WRONG_ANSWER"]
+    }
+  ],
+  "interactive": true
+}

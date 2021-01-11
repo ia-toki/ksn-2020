@@ -1,0 +1,281 @@
+<h3>Description</h3>
+<p>
+  Pak Dengklek has $N$ boxes numbered from $1$ to $N$. Between these $N$ boxes, 
+  there exist <strong>exactly</strong> $K$ boxes which contain a ball. You want to find out which 
+  boxes contain a ball by asking several questions to Pak Dengklek.
+</p><p>
+  In one question, you ask several sets $S_1, S_2, \dots, S_x$, where 
+  $x$ is the number of sets you give in that question. Each set consists of up to $N$ 
+  elements, which are <strong>distinct</strong> integers between $1$ and $N$. 
+  This question will be answered with $x$ answers. The $i$-th answer is based on 
+  set $S_i$ and will be:
+</p>
+<ul>
+  <li><code>YA</code>, if there is at least one box that contains a ball and its 
+  number is an element of $S_i$; or</li>
+  <li><code>TIDAK</code>, otherwise</li>
+</ul>
+<p>
+  Define $\min(|S_i|)$ as a function which returns the minimum value of 
+  $|S_1|, |S_2|, \dots, |S_x|$, where the notation $|S|$ represents the cardinality 
+  of the set $S$. The cost of this question is $\frac{1}{\min(|S_i|)}$. You want to 
+  minimize the total cost of all questions you give until you can correctly 
+  guess all of the boxes which contain a ball. Your score will depend on 
+  the total cost, using a formula that will be explained in the Scoring section.
+</p>
+
+<h3>Problem Type Information</h3>
+<p>
+  This is an "interactive" problem. In this problem, you will interact with the judge's 
+  program through standard input (stdin) and standard output (stdout). See the 
+  following interaction format carefully.
+</p>
+
+<h3>Interaction Format</h3>
+<p>
+  In the beginning, the values of $N$ and $K$ will be given from standard input in 
+  the following format:
+</p>
+<pre>
+N K
+</pre>
+<p>
+  Then, for each question, you can output to standard output in the following format:
+</p>
+<pre>
+? x
+C<sub>1</sub> S<sub>1,1</sub> S<sub>1,2</sub> ... S<sub>1,C<sub>1</sub></sub>
+C<sub>2</sub> S<sub>2,1</sub> S<sub>2,2</sub> ... S<sub>2,C<sub>2</sub></sub>
+.
+.
+.
+C<sub>x</sub> S<sub>x,1</sub> S<sub>x,2</sub> ... S<sub>x,C<sub>x</sub></sub>
+</pre>
+<p>
+  This means you give $x$ sets numbered from $1$ to $x$. The set $S_i$ has 
+  $C_i$ elements $S_{i,1}, S_{i,2}, \dots, S_{i,C_i}$ which are <strong>distinct</strong> 
+  integers between $1$ and $N$.
+</p><p>
+  For each question, Pak Dengklek will give answers from standard input in the 
+  following format:
+</p>
+<pre>
+R<sub>1</sub>
+R<sub>2</sub>
+.
+.
+.
+R<sub>x</sub>
+</pre>
+<p>
+  where each $R_i$ can be either <code>YA</code> or <code>TIDAK</code> as an 
+  answer for the set $S_i$ following the answer rules explained in the Description 
+  section.
+</p>
+<p>
+  In the end, your answer has to be output to standard output in the following 
+  format:
+</p>
+<pre>
+! i'<sub>1</sub> i'<sub>2</sub> ... i'<sub>K</sub>
+</pre>
+<p>
+  This means you guess $K$ boxes that boxes with number $i'_1, i'_2, \dots, i'_K$ each contains 
+  a ball. Your answer will be considered as correct if all $K$ guessed boxes indeed 
+  contain a ball, and you will get score using a formula that will be 
+  explained in the Scoring section.
+</p>
+
+<h3>Interaction Sample 1</h3>
+<p>
+  In the following sample, $N = 4, K = 1$, and the $3$-rd box contains a ball.
+</p>
+<table border="1">
+  <thead>
+    <th>Standard input</th>
+    <th>Standard output</th>
+  </thead>
+  <tbody>
+    <tr><td>
+<pre>
+4 1
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+? 2
+3 1 2 3
+1 4
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+YA
+TIDAK
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+? 2
+2 1 2
+2 2 3
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+TIDAK
+YA
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+! 3
+</pre>
+    </td></tr>
+  </tbody>
+</table>
+
+<h3>Explanation of Interaction Sample 1</h3>
+<p>
+  The first question costs $\frac{1}{1}$, and the second question costs $\frac{1}{2}$. 
+  The total costs for all questions are $\frac{3}{2}$. Using the formula given in the 
+  Scoring section, the score you get from this interaction sample is $5$.
+</p>
+
+<h3>Interaction Sample 2</h3>
+<p>
+  In the following sample, $N = 4, K = 1$, and the $3$-rd and $4$-th boxes 
+  contain a ball.
+</p>
+<table border="1">
+  <thead>
+    <th>Standard input</th>
+    <th>Standard output</th>
+  </thead>
+  <tbody>
+    <tr><td>
+<pre>
+4 2
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+? 2
+3 1 2 3
+3 2 3 4
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+YA
+YA
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+? 3
+2 1 2
+2 2 3
+3 1 3 4
+</pre>
+    </td></tr>
+    <tr><td>
+<pre>
+TIDAK
+YA
+YA
+</pre>
+    </td><td></td></tr>
+    <tr><td></td><td>
+<pre>
+! 3 4
+</pre>
+    </td></tr>
+  </tbody>
+</table>
+
+<h3>Explanation of Interaction Sample 2</h3>
+<p>
+  The first question costs $\frac{1}{3}$, and the second question costs $\frac{1}{2}$. 
+  The total cost for all questions is $\frac{5}{6}$. Using the formula given in the 
+  Scoring section, the score you get from this interaction sample is $20$.
+</p>
+
+<h3>Scoring</h3>
+
+<p>
+  There are restrictions on the number of questions you can ask Pak Dengklek:
+</p>
+<ul>
+  <li>The number of sets you give in a question must not exceed $10$</li>
+  <li>The total number of sets you give in all questions must not exceed $N$</li>
+</ul>
+<p>
+  If any of the restictions above is violated, you will receive score $0$.
+</p>
+
+<p>
+  The formula used to determine your score depends on the value of $K$. Suppose 
+  that $P$ is the total cost from all of your questions. For $K = 1$, the score 
+  that you get is:
+</p>
+<table border="1">
+  <thead>
+    <th>Condition</th>
+    <th>Points</th>
+  </thead>
+  <tbody>
+	<tr><td>$N \leq P$</td><td>$0$</td></tr>
+    <tr><td>$1 \leq P \lt N$</td><td>$\lfloor 10 \times (1 - \sqrt{\frac{P - 1}{N - 1}} ) \rfloor$</td></tr>
+    <tr><td>$\frac{2}{N} \lt P \lt 1$</td><td>$\lfloor 30 - 20 \times (1 - \frac{2}{N \times P})^{0.8} \rfloor$</td></tr>
+    <tr><td>$P \leq \frac{2}{N}$</td><td>$30$</td></tr>
+  </tbody>
+</table>
+<p>
+  Meanwhile for $K = 2$, the score that you get is:
+</p>
+<table border="1">
+  <thead>
+    <th>Condition</th>
+    <th>Points</th>
+  </thead>
+  <tbody>
+	<tr><td>$N \leq P$</td><td>$0$</td></tr>
+    <tr><td>$1 \leq P \lt N$</td><td>$\lfloor 20 \times (1 - \sqrt{\frac{P - 1}{N - 1}} ) \rfloor$</td></tr>
+    <tr><td>$\frac{4}{N} \lt P \lt 1$</td><td>$\lfloor 70 - 50 \times (1 - \frac{4}{N \times P})^{0.8} \rfloor$</td></tr>
+    <tr><td>$P \leq \frac{4}{N}$</td><td>$70$</td></tr>
+  </tbody>
+</table>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>$N = 2^{10}$</li>
+  <li>$1 \leq K \leq 2$</li>
+</ul>
+
+<subtask1/>
+<ul>
+  <li>$K = 1$</li>
+</ul>
+
+<subtask2/>
+<ul>
+  <li>$K = 2$</li>
+</ul>
+
+<h3>Warning</h3>
+<p>
+  Always <em>flush</em> after each output.
+</p>
+<ul>
+  <li>Pascal:<pre>flush(output);</pre></li>
+  <li>C/C++:
+      <ul>
+        <li>for <code>stdio.h</code> (<code>cstdio</code>) library:<pre>fflush(stdout);</pre></li>
+        <li>for <code>iostream</code> library:<pre>std::cout << std::flush;</pre></li>
+      </ul>
+  </li>
+</ul>

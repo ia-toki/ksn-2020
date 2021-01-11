@@ -1,0 +1,239 @@
+<h3>Deskripsi</h3>
+<p>
+  Negara Toki memiliki wilayah berbentuk persegi panjang. Denah wilayah Negara Toki dapat 
+  direpresentasikan dalam sistem koordinat Kartesius. Keempat titik sudut dari persegi panjang ini 
+  berada pada titik $(0, 0)$, $(N, 0)$, $(N, M)$, dan $(0, M)$.
+</p><p>
+  Pak Dengklek sebagai Menteri Pertahanan dari Negara Toki ingin membagi wilayah negara 
+  menjadi $K$ wilayah pertahanan, yang dinomori dari $1$ hingga $K$. Berikut 
+  adalah ketentuan masing-masing wilayah pertahanan yang diinginkan Pak Dengklek.
+</p>
+<ul>
+  <li>Keseluruhan wilayah pertahanan berada di dalam wilayah Negara Toki.</li>
+  <li>Sebuah wilayah pertahanan berbentuk persegi panjang yang titik-titik sudutnya berada
+  di koordinat-koordinat bilangan bulat, dan sisi-sisinya sejajar dengan sumbu $X$ atau sumbu $Y$.</li>
+  <li>Wilayah pertahanan tidak beririsan, tetapi boleh bersinggungan pada titik sudut ataupun 
+  sisi wilayah pertahanan lainnya.</li>
+</ul>
+<p>
+  Pak Dengklek meminta Anda untuk melakukan pembagian wilayah tersebut sesuai dengan persyaratan 
+  di atas. Selain itu, Pak Dengklek ingin agar wilayah pertahanan ke-$i$ memiliki luas $A_i$. 
+  Anda diperbolehkan untuk tidak mengikuti permintaan ini, tetapi Pak Dengklek akan lebih bahagia 
+  apabila Anda dapat memberi wilayah sesuai dengan luas yang Pak Dengklek inginkan.
+</p><p>
+  Sebut wilayah pertahanan ke-$i$ yang Anda buat memiliki luas $B_i$. Untuk setiap wilayah
+  pertahanan $i$, nilai kebahagiaan Pak Dengklek akan bertambah sebesar:
+</p>
+<ul>
+  <li>$3$, jika $B_i = A_i$,</li>
+  <li>$2$, jika $B_i > A_i$,</li>
+  <li>$1$, jika $0 < B_i < A_i$,</li>
+  <li>$0$, jika Anda tidak memberikan wilayah untuk wilayah pertahanan ke-$i$.</li>
+</ul>
+<p>
+  Bantu Pak Dengklek dalam menentukan pembagian wilayah pertahanan! Apabila terdapat lebih dari 
+  satu solusi, keluarkan yang mana saja. Anda diperbolehkan untuk tidak memasukkan sebagian wilayah 
+  Negara Toki ke dalam suatu wilayah pertahanan. Nilai Anda akan bergantung pada total nilai 
+  kebahagiaan Pak Dengklek, menggunakan rumus yang akan dijelaskan pada bagian Penilaian.
+</p>
+
+<h3>Informasi Tipe Soal</h3>
+<p>
+  Soal ini bertipe "output-only". Untuk setiap kasus uji, Anda menuliskan keluaran program ke dalam
+  sebuah berkas keluaran.
+</p><p>
+  Masukan untuk soal ini dapat diunduh di bagian Lampiran yang terdapat di bagian bawah soal. 
+  Di dalam berkas .zip tersebut terdapat $2 + 10$ masukan untuk diselesaikan: <code>pertahanan_contoh_1.in</code>, 
+  <code>pertahanan_contoh_2.in</code>, <code>pertahanan_1.in</code>, <code>pertahanan_2.in</code>, 
+  ..., <code>pertahanan_10.in</code>. Masukan contoh (<code>pertahanan_contoh_1.in</code> dan 
+  <code>pertahanan_contoh_2.in</code>) tidak termasuk dalam penilaian peserta.
+</p><p>
+  Untuk setiap berkas masukan yang diselesaikan (Anda tidak harus menyelesaikan semua masukan), 
+  buatlah berkas keluaran dengan nama <code>pertahanan_contoh_T.out</code> (untuk masukan contoh) atau 
+  <code>pertahanan_T.out</code>, dengan <code>T</code> adalah nomor kasus uji. Kemudian, kompres 
+  semua berkas keluaran ke dalam sebuah berkas .zip. Jika Anda membuat program untuk membantu 
+  menyelesaikan soal ini, masukkan semua kode program Anda ke dalam berkas .zip tersebut, lalu kumpulkan.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N M K
+A<sub>1</sub> A<sub>2</sub> ... A<sub>K</sub>
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  $K$ baris: baris ke-$i$ berisi $4$ buah bilangan bulat $x_1, x_2, y_1,$ dan $y_2$
+  yang menunjukkan bahwa titik-titik sudut wilayah pertahanan ke-$i$ berada pada titik $(x_1, y_1)$, 
+  $(x_2, y_1)$, $(x_2, y_2)$, dan $(x_1, y_2)$. Apabila Anda tidak ingin membagikan wilayah 
+  untuk wilayah pertahanan ke-$i$, keluarkan <code>-1 -1 -1 -1</code>.	
+</p>
+
+<h3>Contoh Masukan 1</h3>
+<pre>
+4 5 3
+8 9 3
+</pre>
+<h3>Contoh Keluaran 1</h3>
+<pre>
+0 4 0 2
+0 3 2 5
+3 4 2 5
+</pre>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Contoh ini dapat diilustrasikan dengan gambar berikut. Nomor yang tertera dalam persegi panjang pada 
+  gambar bersesuaian dengan nomor wilayah pertahanan. Karena semua wilayah pertahanan memiliki luas sesuai 
+  dengan yang Pak Dengklek minta, maka total nilai kebahagiaan Pak Dengklek adalah $3 + 3 + 3 = 9$. 
+  Berdasarkan rumus yang ada di bagian Penilaian, nilai yang diperoleh dari contoh keluaran 
+  ini adalah $10$.
+</p>
+<p style="text-align: center;"><img src="render/pertahanan-negara-1.png" style="width: 250px;"/></p>
+
+<h3>Contoh Masukan 2</h3>
+<pre>
+3 5 4
+5 4 3 3
+</pre>
+<h3>Contoh Keluaran 2</h3>
+<pre>
+0 1 0 5
+1 2 0 4
+2 3 0 3
+-1 -1 -1 -1
+</pre>
+
+<h3>Penjelasan Contoh 2</h3>
+<p>
+  Contoh ini dapat diilustrasikan dengan gambar berikut. Nomor yang tertera dalam persegi panjang pada 
+  gambar bersesuaian dengan nomor wilayah pertahanan. Perhatikan bahwa pada contoh keluaran ini, 
+  wilayah pertahanan ke-$4$ tidak mendapat pembagian wilayah. Selain itu, terdapat sebagian wilayah 
+  Negara Toki yang tidak berada di dalam wilayah pertahanan mana pun. Total nilai kebahagiaan Pak Dengklek 
+  adalah $3 + 3 + 3 + 0 = 9$. Berdasarkan rumus yang ada di bagian Penilaian, nilai yang diperoleh dari 
+  contoh keluaran ini adalah $5$.   
+</p>
+<p style="text-align: center;"><img src="render/pertahanan-negara-2.png" style="width: 250px;"/></p>
+
+<h3>Penilaian</h3>
+<p>
+  Keluaran Anda akan mendapatkan nilai pada sebuah kasus uji jika keluaran Anda mengikuti format keluaran yang 
+  disebutkan sebelumnya dan memenuhi semua syarat yang Pak Dengklek minta.
+</p><p>
+  Jika $X$ adalah total nilai kebahagiaan Pak Dengklek berdasarkan pembagian wilayah pertahanan Anda, 
+  maka nilai yang Anda dapatkan adalah:
+</p>
+
+<table border="1">
+  <thead>
+    <th>Kondisi</th>
+    <th>Poin</th>
+  </thead>
+  <tbody>
+    <tr><td>$X = 3K$</td><td>$10$</td></tr>
+    <tr><td>$X < 3K$</td><td>$\lfloor (\frac{X}{K})^2 \rceil$</td></tr>
+  </tbody>
+</table>
+<p>
+  Notasi $\lfloor x \rceil$ mengembalikan nilai pembulatan $x$ ke bilangan bulat terdekat, dengan pecahan $0.5$
+  dibulatkan ke atas. Untuk semua masukan, dijamin bahwa terdapat keluaran yang mendapatkan nilai $10$.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>$1 \leq N, M \leq 10^9$</li>
+  <li>$1 \leq K \leq 10^5$</li>
+  <li>$1 \leq A_i \leq 10^9$</li>
+  <li>$A_1+A_2+\dots+A_K = N \times M$</li>
+</ul>
+
+<h4>pertahanan_1.in</h4>
+<ul>
+  <li>$N = 5$</li>
+  <li>$M = 5$</li>
+  <li>$K = 5$</li>
+  <li>$A = \{4, 4, 4, 4, 9\}$</li>
+</ul>
+
+<h4>pertahanan_2.in</h4>
+<ul>
+  <li>$N = 6$</li>
+  <li>$M = 7$</li>
+  <li>$K = 8$</li>
+  <li>$A = \{2, 3, 4, 5, 6, 6, 7, 9\}$</li>
+</ul>
+
+<h4>pertahanan_3.in</h4>
+<ul>
+  <li>$N = 1$</li>
+  <li>$M = 10^9$</li>
+  <li>$K = 10^5$</li>
+</ul>
+
+<h4>pertahanan_4.in</h4>
+<ul>
+  <li>$N = 99999$</li>
+  <li>$M = 50000$</li>
+  <li>$K = 99999$</li>
+  <li>$A_i = i$, untuk $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_5.in</h4>
+<ul>
+  <li>$N = 9973 \times 293$</li>
+  <li>$M = 99991 \times 311$</li>
+  <li>$K = 9973 \times 99991$</li>
+  <li>$A_i = 293 \times 311$, untuk $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_6.in</h4>
+<ul>
+  <li>$N = 2$</li>
+  <li>$M = 10^9$</li>
+  <li>$K = 20$</li>
+  <li>Terdapat $10 \; A_i$ bernilai genap dan $10 \; A_i$ bernilai ganjil</li>
+</ul>
+
+<h4>pertahanan_7.in</h4>
+<ul>
+  <li>$N = 2$</li>
+  <li>$M = 10^4$</li>
+  <li>$K = 100$</li>
+</ul>
+
+<h4>pertahanan_8.in</h4>
+<ul>
+  <li>$N = 4681$</li>
+  <li>$M = 229383$</li>
+  <li>$K = 30$</li>
+  <li>$A_i = 2^{i-1}$, untuk $1 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_9.in</h4>
+<ul>
+  <li>$N = 46368$</li>
+  <li>$M = 28657$</li>
+  <li>$K = 23$</li>
+  <li>$A_1 = A_2 = 1$</li>
+  <li>$\sqrt{A_i} = \sqrt{A_{i-1}} + \sqrt{A_{i-2}}$, untuk $3 \leq i \leq K$</li>
+</ul>
+
+<h4>pertahanan_10.in</h4>
+<ul>
+  <li>$N = 2000$</li>
+  <li>$M = 2000$</li>
+  <li>$K = 78987$</li>
+  <li>$A_i \leq 100$, untuk $1 \leq i \leq K$</li>
+  <li>Kasus uji dibuat secara acak dengan distribusi probabilitas yang seragam</li>
+</ul>
+
+<h3>Lampiran</h3>
+<p>
+  Berkas masukan untuk soal ini tersedia di <a href="render/inputs.zip">sini</a>.
+</p>
