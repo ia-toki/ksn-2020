@@ -36,6 +36,11 @@ Problem repository of **KSN 2020** (also known internationally as
 The problem statements and upsolving are available
 [on TLX](https://tlx.toki.id/problems/ksn-2020).
 
+## Editorial
+
+The (unofficial) editorial written by the community can be found in this
+[Codeforces blog](https://codeforces.com/blog/entry/86650).
+
 ## Problem Repository Structure
 
 Each problem contains a problem directory root (e.g.
